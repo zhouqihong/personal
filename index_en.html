@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>周启红 - 国际中文教育研究</title>
+    <title>Zhou Qihong - International Chinese Language Education Research</title>
     <style>
         body {
             font-family: "宋体", SimSun, "微软雅黑", sans-serif;
@@ -10,12 +10,14 @@
             margin: 0;
             padding: 20px 10%;
             background: #f5f5f5;
+            position: relative; /* 添加这一行 */
         }
 
         .header {
             border-bottom: 3px solid #003366;
             padding: 20px 0;
             margin-bottom: 30px;
+            position: relative; /* 添加这一行 */
         }
         .name {
             color: #003366;
@@ -69,115 +71,206 @@
             padding: 20px;
             border-radius: 5px;
         }
+        
+        /* 新的按钮样式 - 美观且固定在右上角 */
+        .language-switch {
+            position: fixed; /* 使用fixed定位确保始终可见 */
+            top: 20px;
+            right: 10%;
+            padding: 10px 20px;
+            background-color: #003366;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px; /* 更圆润的边角 */
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            z-index: 1000; /* 确保在最上层 */
+            border: 2px solid #002244;
+        }
+        .language-switch:hover {
+            background-color: #002244;
+            transform: translateY(-2px); /* 悬停时轻微上浮效果 */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
     </style>
 </head>
 <body>
+     <a href="index_en.html" class="language-switch">English</a>
+    
     <div class="header">
         <div class="name">Zhou Qihong</div>
-        <div class="title">Associate Professor, Ph.D. | Master`s Supervisor of international Chinese education, Prompt Engineer</div>
-        <div class="title">Research interests: large language model, artificial intelligence and language teaching, academic Chinese, international Chinese education, digital humanities，data mining</div>
+        <div class="title">Associate Professor, Ph.D. | Master's Supervisor in International Chinese Language Education, Prompt Engineer</div>
+        <div class="title">Research Interests: Large Language Models, Artificial Intelligence and Language Teaching, Academic Chinese, International Chinese Language Education, Digital Humanities, Data Mining</div>
     </div>
 
     <div class="section">
         <div class="profile">
-            <img src="qihong.jpeg" alt="周启红照片" class="avatar">
+            <img src="qihong.jpeg" alt="Zhou Qihong Photo" class="avatar">
             <div>
                 <p>📧zhouqihong338@hotmail.com</p>
                 <p>📞 023-6538****</p>
-                <p>🏢 School of Chinese Language and Culture, Sichuan International Studies University </p>
+                <p>🏢 College of Chinese Language and Culture, Sichuan International Studies University</p>
             </div>
         </div>
 
         <h2>Biography</h2>
         <ul>
-            <li>He graduated from Peking University in 2022 with a doctorate degree in education, associate professor, and master's supervisor,Jialing Young Scholar Fellowship. His research interests include artificial intelligence and language teaching, large language models, academic Chinese, computational linguistics, corpus linguistics, language acquisition, and teaching Chinese to speakers of other languages. He has presided over 1 project of the National Social Science Fund, participated in 3 national projects, 5 provincial and ministerial projects, presided over 1 humanities and social science planning project of the Chongqing Municipal Education Commission, 3 school-level projects, published more than 10 papers in "Contemporary Rhetoric", "Application of Language and Writing", "Chinese Teaching and Research" and Springer, developed 3 software, and opened courses such as "Python Basics and Data Mining", "Big Data Technology and Application", "Language Research Design and Methods" and so on. From 2009 to 2012, he taught at the Confucius Institute at the University of Botswana. Outstanding undergraduate thesis supervisor of Sichuan University of Foreign Chinese. In 2019, he was awarded the scholarship of the Chinese Academy of Chinese Language.</li>
+            <li>Zhou Qihong is an Associate Professor and Master's Supervisor at the College of Chinese Language and Culture, Sichuan International Studies University, a Jialing Young Scholar, and Director of the Chinese Language Education Research Center. He received his Ph.D. in Education from Peking University in 2022. His primary research areas include artificial intelligence and language teaching, academic Chinese, and Chinese international education. He is a member of the International Association of Chinese Linguistics, the World Chinese Language Teaching Society, and the Chongqing Linguistics Society. He has led one National Social Science Fund project, participated in three national-level projects and five provincial-level projects, and directed one Chongqing Municipal Education Commission Humanities and Social Sciences project and three university-level projects. He has published multiple papers in CSSCI and EI journals such as Contemporary Rhetoric, Applied Linguistics, Teaching Chinese as a Second Language Research, Japanese Language Learning and Research, and Chinese Lexical Semantics. He has developed three software applications and teaches courses including Python Fundamentals and Data Mining, Big Data Technology and Applications, and Language Research Design and Methods. In 2025, his course Python Fundamentals and Data Mining was selected as one of the first batch of "AI+" key construction courses in Chongqing. His developed tool "AI Assistant for International Chinese Language Education Learning" won the "Gold Medal Teaching Tool" award at the 2025 World Chinese Language Conference. In April 2026, he received the Provincial First Prize in the AI Track of the 6th National Teacher Teaching Innovation Competition. He was posted to the Confucius Institute at the University of Botswana from 2009 to 2012. In 2019, he received a scholarship from the Chinese Linguistics Academy. He is a member of the 2nd Youth Editorial Board of the Journal of Guizhou Normal University (Social Sciences Edition).</li>
         </ul>
 
-        <h2>Scientific research projects</h2>
+        <h2>Research Projects</h2>
         <ul class="project-list">
-            <li><span class="project-year">2024-2027</span> National Social Science Fund， "Theory and Application of Position Expression in Chinese Academic Discourse" (24XYY005, PI)</li>
-            <li><span class="project-year">2024-2026</span> Humanities and Social Sciences Project of Chongqing Municipal Education Commission, "Research on Stance Markers in Academic Chinese Discourse" (24SKGH178, PI)</li>
-            <li><span class="project-year">2023-2025</span> University-level Funding Project "Research on Stance Markers in Academic Chinese Discourse" (PI)</li>
-            <li><span class="project-year">2017</span> National Social Science Foundation of China, "Research on Confucian Literature in Buddhist Inscriptions in Southwest China since the Ming and Qing Dynasties" (Completed Project 17XZJ002, Ranked 3rd)</li>
-            <li><span class="project-year">2016</span> "The Evolutionary History and Theoretical Interpretation of Chinese Sleep Verbs" (Completed 16XYY012, ranked fifth)</li>
-            <li><span class="project-year">2014</span> Humanities and Social Sciences Project of the Ministry of Education, "Research on the Inscription Literature of Han Buddhist Temples in Southwest China" (Completed 14YJC730005, ranked third)</li>
-            <li><span class="project-year">2023</span>Python Fundamentals and Data Mining Course Construction and Research in Foreign Chinese University from the Perspective of New Liberal Arts (PI: 2023-2025)</li>
-            <li><span class="project-year">2023</span>University Textbook Project: Python Fundamentals and Data Mining (PI: 2023-2025)</li>
-            <li><span class="project-year">2019</span>  Educational Reform Paper: Survey and Review of the Textbook Satisfaction Survey and Review of "Grammar and Grammar Teaching in International Languages", Research on Higher Education Teaching Reform (6th Edition), 2019</li>
-            <li><span class="project-year">2025</span> University-level Undergraduate Artificial Intelligence Empowerment (AI+) Course Construction Project: Python Fundamentals and Data Mining 2025</li>
-            <li><span class="project-year">2025</span> Chongqing's first batch of municipal-level "artificial intelligence+" key construction courses are recommended: Python Fundamentals and Data Mining 2025</li>
+            <li><span class="project-year">2024-2027</span> National Social Science Fund Western Project "Theory and Application of Stance Expression in Chinese Academic Discourse" (24XYY005, Principal Investigator)</li>
+            <li><span class="project-year">2024-2026</span> Chongqing Municipal Education Commission Humanities and Social Sciences Project "A Study of Stance Markers in Chinese Academic Discourse" (24SKGH178, Principal Investigator)</li>
+            <li><span class="project-year">2023-2025</span> University-level Later-stage Funding Project "A Study of Stance Markers in Chinese Academic Discourse" (Completed sisu202331, Principal Investigator)</li>
+            <li><span class="project-year">2017</span> National Social Science Fund General Project "A Study of Confucian Documents in Buddhist Stele Inscriptions in Southwest China since the Ming and Qing Dynasties" (Completed 17XZJ002, Third Contributor)</li>
+            <li><span class="project-year">2016</span> National Social Science Fund Western Project "The Evolution History and Theoretical Explanation of Chinese Sleep Verbs" (Completed 16XYY012, Fifth Contributor)</li>
+            <li><span class="project-year">2014</span> Ministry of Education Humanities and Social Sciences Project "A Study of Stele Inscriptions in Han Buddhist Temples in Southwest China" (Completed 14YJC730005, Third Contributor)</li>
+            <li><span class="project-year">2023</span> Construction and Research of Python Fundamentals and Data Mining Course at a Foreign Studies University from the Perspective of New Liberal Arts (Principal Investigator: 2023-2025)</li>
+            <li><span class="project-year">2023</span> University-level Textbook Project: Python Fundamentals and Data Mining (Completed, Principal Investigator)</li>
+            <li><span class="project-year">2019</span> Teaching Reform Paper: "Survey and Review of Textbook Satisfaction for International Chinese Grammar and Grammar Teaching," Higher Education Teaching Reform Research (Vol. 6) 2019</li>
+            <li><span class="project-year">2025</span> University-level Undergraduate AI-Empowered (AI+) Course Construction Approval: Python Fundamentals and Data Mining 2025</li>
+            <li><span class="project-year">2025</span> Chongqing First Batch of Municipal "AI+" Key Construction Course Approval: Python Fundamentals and Data Mining 2025</li>
+            <li><span class="project-year">2026</span> Chongqing Postgraduate Education Teaching Reform Research Project: AI-Empowered Chinese Learning Platform Construction and Teaching Reform Practice for Spanish-Speaking Learners in Latin America 2026</li>
+            <li><span class="project-year">2026</span> Chongqing Higher Education Teaching Reform Research "Digital Transformation of Education" Special Project: AI-Empowered Development and Application Research of Digital-Intelligent Lesson Cases for General Education Courses in Foreign Studies Universities 2026</li>
         </ul>
 
-        <h2>Academic achievements</h2>
+        <h2>Academic Publications</h2>
         <h3>Books</h3>
         <ul class="publication">
             <li>Python Fundamentals and Data Mining, Chongqing University Press, 2026</li>
+            <li>Introduction to Python and Intelligent Text Processing (Authored Chapters 6 and 11), Science Press, 2025</li>
         </ul>
         
-        <h3>Journal papers</h3>
+        <h3>Journal Papers</h3>
         <ul class="publication">
-            <li>A multidimensional analysis of the changes in discourse characteristics of Chinese academic papers. Journal of Language and Writing Application, 2024(3), CSSCI</li>
-            <li>A Discipline Distribution of Self-Mentioned Languages in Academic Chinese. Contemporary Rhetoric, 2023(2), CSSCI</li>
-            <li>Research on Teachers' Factors Influencing Communicative Intention in Chinese Classroom. Chinese Language Teaching and Research, 2021(4), CSSCI</li>
+            <li>A Local Grammar Study of Defining Speech Acts in Chinese Linguistic Academic Discourse. Japanese Language Learning and Research, 2026(6), CSSCI</li>
+            <li>Exploring Student Learning Motivation in Python Fundamentals and Data Mining under the New Liberal Arts Context. Journal of Changchun University, 2025(10)</li>
+            <li>A Multi-Dimensional Analysis of Diachronic Changes in Chinese Academic Paper Discourse Features. Applied Linguistics, 2024(3), CSSCI</li>
+            <li>A Disciplinary Distribution Study of Self-Mention in Academic Chinese. Contemporary Rhetoric, 2023(2), CSSCI</li>
+            <li>A Study of Teacher Factors Affecting Willingness to Communicate in Chinese Classrooms. Teaching Chinese as a Second Language Research, 2021(4), CSSCI</li>
             <li>The Construction of a Collocation List Based on Academic Papers of Teaching Chinese to Speakers of Other Languages. Chinese Lexical Semantics, 2021, EI</li>
             <li>A Corpus-Based Study of Lexical Chunks in Chinese Academic Discourse. Chinese Lexical Semantics, 2023, EI</li>
         </ul>
 
         <h2>Teaching</h2>
-        <h3>Undergraduate programs</h3>
+        <h3>Undergraduate Courses</h3>
         <ul>
             <li>Python Fundamentals and Data Mining</li>
             <li>Big Data Technology and Applications</li>
-            <li>Fundamentals of Artificial Intelligence</li>
-            <li>Modern educational technology</li>
-            <li>Grammar and grammar teaching</li>
-            <li>Introduction to Teaching Chinese to Speakers of Other Languages</li>
+            <li>Foundations of Artificial Intelligence</li>
+            <li>Modern Educational Technology</li>
+            <li>Grammar and Grammar Teaching</li>
+            <li>Introduction to Chinese International Education</li>
         </ul>
         
-        <h3>Graduate Programs</h3>
+        <h3>Graduate Courses</h3>
         <ul>
             <li>Language Research Methods and Design</li>
             <li>Teaching Chinese as a Second Language</li>
-            <li>Research Ethics and Academic Norms (responsible for big data mining and analysis)</li>
+            <li>Grammar and Grammar Teaching</li>
+            <li>Research Ethics and Academic Norms (Co-taught, responsible for big data mining and analysis section)</li>
         </ul>
 
-        <h2>School-enterprise cooperation</h2>
+        <h2>University-Industry Collaboration</h2>
         <ul>
-            <li>Partnered with Tencent Kaiwu to launch an online course "Fundamentals of Artificial Intelligence"</li>
+            <li>Collaborated with Tencent Kaiming to develop the online course Foundations of Artificial Intelligence</li>
         </ul>
         
-        <h2>Social services</h2>
+        <h2>Professional Service</h2>
         <ul>
-            <li>Anonymous review expert of master's degree dissertation of the Ministry of Education, anonymous review expert of undergraduate dissertation of the Ministry of Education, anonymous review of academic journals such as Chinese Lexical Semantics, IJCLT, Chinese Language Teaching and Research, etc</li>
-            <li>2025 Writing the Future Intelligently: AI Empowering Creative Writing Academy Class Leader</li>
+            <li>Anonymous Reviewer for Ministry of Education Master's Degree Theses and Undergraduate Theses; Member of the 2nd Youth Editorial Board of Journal of Guizhou Normal University (Social Sciences Edition); Anonymous Reviewer for journals including Chinese Lexical Semantics, IJCLT, and Teaching Chinese as a Second Language Research</li>
+            <li>Director of the Wisdom Writing Future: AI-Empowered Creative Writing Academy Class (2025/2026)</li>
+            <li>Member of the Doctoral Expert Group of Chongqing Digital Economy Industry Chamber of Commerce</li>
         </ul>
         
-        <h2>Instruct students</h2>
+        <h2>Student Supervision</h2>
         <ul>
-            <li>Postgraduate: Du Yue (2024) "The Effect of Scaffolding Theory on Chinese Writing Anxiety: A Case Study of the Third Grade of Primary School in Singapore"</li>
-             <li>Graduate student: Wang Haimin (2025) "Research on the Application of International Chinese Teachers' Lesson Preparation Based on Large Language Model"</li>
-             <li>Undergraduate: Tao Bo (2025) "A Comparative Study on the Writing Quality and Syntactic Complexity of Chinese Second Language, Native Speakers and DeepSeek Generative Narrative Essays" (Outstanding Undergraduate Thesis)</li>
-             <li>Undergraduate: Li Hongmei (2024) "Research on the Linguistic Characteristics of Live Streaming Anchors from the Perspective of Multimodal Discourse Analysis: A Case Study of Xiaohongshu Influential Anchors" (Excellent Undergraduate Thesis)</li>
-            <li>Undergraduate: Fei Hongmian (2024) "Research on the Teaching of Elementary Speaking Practice Classes Based on Output-Oriented Method: A Case Study of High School Students in Mae Ai Middle School, Thailand" (Excellent Undergraduate Thesis)</li>
+            <li>Graduate: Tang Ruiqi (2026) "A Comparative Analysis of Discourse Features in Paper Abstracts Generated by Chinese Learners and Large Language Models"</li>
+            <li>Graduate: Zhao Enyu (2026) "A Study on Evaluative Speech Acts in Introductions of Chinese Academic Papers"</li>
+            <li>Graduate: Su Ting (2025) "A Corpus-Based Multi-Dimensional Quantitative Analysis of Modern Chinese Registers: A Case Study of News, Academic, and Fiction Texts"</li>
+            <li>Graduate: Wang Haimin (2025) "A Study on the Application of Large Language Models for Lesson Preparation by International Chinese Language Teachers"</li>
+            <li>Graduate: Du Yue (2024) "The Impact of Scaffolding Theory on Chinese Writing Anxiety: A Case Study of Third Graders in Singapore Primary Schools"</li>
+            <li>Undergraduate: Zhao Siyu (2026) "Quality Assessment of AI-Generated Grammar Resources for Intermediate Chinese Learners: A Case Study of DeepSeek" (Outstanding Undergraduate Thesis)</li>
+            <li>Undergraduate: Tao Bo (2025) "A Comparative Study of Narrative Writing Quality and Syntactic Complexity among Chinese L2 Learners, Native Speakers, and DeepSeek-Generated Texts" (Outstanding Undergraduate Thesis)</li>
+            <li>Undergraduate: Li Hongmei (2024) "A Study on the Linguistic Features of Live Streaming Sales Hosts from the Perspective of Multimodal Discourse Analysis: A Case Study of Xiaohongshu Influential Hosts" (Outstanding Undergraduate Thesis)</li>
+            <li>Undergraduate: Fei Hongmian (2024) "A Study on Teaching Primary Oral Practice Courses Based on the Production-Oriented Approach: A Case Study of High School Students at Meiai Middle School in Thailand" (Outstanding Undergraduate Thesis)</li>
         </ul>
-        
-        <h2>Other</h2>
+       
+     
+      <h2>Academic Conferences</h2>
+     <ul>
+        <li>September 11-13, 2026, Convenor of the AI-Empowered International Chinese Language Teaching Innovation Research Sub-forum: <a href="https://mp.weixin.qq.com/s/RM7wICT4R4KkgyziVXQ5hw" target="_blank">The First International Conference on Chinese Language Teacher Education and Development Research, Nanjing University</a></li>
+        <li>May 22, 2026, Confucius Institute at Nizhny Novgorod State Linguistic University "International Chinese Language Teaching Seminar," Keynote Speech Title: AI-Empowered Chinese Learning Platform Design and Practice (Online)</li>
+        <li>April 10-12, 2026, Minzu University of China "The 6th International Young Scholars Symposium on International Chinese Language Education," Keynote Speech Title: A Local Grammar Study of Defining Speech Acts in Chinese Linguistic Academic Discourse</li>
+        <li>October 24-26, 2025, The 5th Symposium on Chinese for Specific Purposes Education, Xi'an International Studies University, Panel Presentation Title: Exploring Large Language Model-Assisted Construction of Academic Chinese Oral Corpora and Resources</li>
+        <li>2024 Symposium on Corpus Construction and Applications, "Frontiers in Corpus Linguistics: Data-Driven Language Research, Innovative Applications, and Future Prospects," August 2024, Beijing Foreign Studies University, Title: Design and Construction of an Academic Chinese Oral Corpus</li>
+        <li>China Association for Comparative Studies of English and Chinese, Educational Linguistics Committee 15th Annual Conference, April 2024, East China Normal University, Title: A Comparative Study of Speech Acts in English and Chinese Academic Discourse from a Local Grammar Perspective: A Case Study of "Exemplification"</li>
+        <li>Chongqing Linguistics Society 14th Annual Conference, December 2023, College of Literature, Southwest University, Title: A Multi-Dimensional Analysis of Diachronic Changes in Chinese Academic Paper Discourse Features</li>
+        <li>The 24th International Conference on Chinese Lexical Semantics, May 2023, Singapore, Title: n-gram Extraction and Classification in Academic Chinese Corpora</li>
+        <li>The 2nd Symposium on Chinese for Specific Purposes, November 2022, Beijing Language and Culture University, Title: Register Feature Changes in Chinese Academic Discourse Based on Multi-Dimensional Analysis</li>
+        <li>2021 International Doctoral Student Forum on Teaching Chinese as a Second Language and the 14th Session, June 2021, Peking University, Title: Quantitative Analysis and Pedagogical Implications of Korean Chinese Learners' Theses</li>
+        <li>The 21st International Conference on Chinese Lexical Semantics (CLSW), May 2020, Hong Kong Polytechnic University, Title: Development and Design of a Collocation Knowledge Base for Academic Papers in Chinese International Education</li>
+        <li>October 5-7, 2019, Columbia University, New York, USA, "The 5th International Forum on Linguistics and Chinese Language Teaching," Panel Presentation Title: Corpus-Based Academic Chinese Vocabulary for Chinese International Education</li>
+        <li>2019 International Symposium on Corpus Linguistics: Interdisciplinary Perspectives, October 2019, University of Shanghai for Science and Technology, Title: Corpus-Based Academic Chinese Word List for Chinese International Education</li>
+        <li>The 5th International Forum on Linguistics and Chinese Language Teaching, October 2019, Columbia University, New York, USA, Title: Corpus-Based Academic Chinese for Chinese International Education</li>
+        </ul>
+
+      
+        <h2>Awards & Other</h2>
         <ul>
-           <p>College Learning Story：<a href="http://ling.cass.cn/xshd/qita/202111/t20211111_5373708.html" target="_blank">The Heart Longs for It, the Action Must Be Achieved - Remembering the Year 3 Study of the Chinese Language Academy in 2019</a></p>
-           <p> Anti-epidemic Volunteer：<a href="https://newscast.sisu.edu.cn/cwxw/e1613a3e05a74e7799c1333c4c880fa7.htm" target="_blank">Story: Anti-Epidemic Story - Perseverance in the Ordinary</a></p>
-           <p>Award: 2025 "2nd Chengdu-Chongqing Economic Circle International Chinese Competition" Excellent Instructor</a></p>
-           <p>Awards: Outstanding Undergraduate Dissertation Guidance Award, Innovation and Entrepreneurship Guidance Award</a></p>
-           
+            <p>Member of the 2nd Youth Editorial Board of Journal of Guizhou Normal University (Social Sciences Edition): <a href="https://mp.weixin.qq.com/s/OsNt_Ql8UvtS4LrONjrA3w" target="_blank">The 2nd Youth Editorial Board Member of Journal of Guizhou Normal University (Social Sciences Edition)</a></p>
+           <p>The 6th National Teacher Teaching Innovation Competition, AI Track, Provincial First Prize: <a href="https://mp.weixin.qq.com/s/5DTAwKit2zcJwU0R79UGbg" target="_blank">The 6th National Teacher Teaching Innovation Competition, AI Track, Provincial First Prize</a></p>
+           <p>Member of the Doctoral Expert Group of Chongqing Digital Economy Industry Chamber of Commerce: <a href="https://mp.weixin.qq.com/s/MNDVfeeMvXJDGfbpCiOiew" target="_blank">Member of the Doctoral Expert Group of Chongqing Digital Economy Industry Chamber of Commerce</a></p>
+            <p>Academy Learning Story: <a href="http://ling.cass.cn/xshd/qita/202111/t20211111_5373708.html" target="_blank">Where the heart aspires, the feet will reach — Reflections on the Third Year of the 2019 Chinese Linguistics Academy</a></p>
+           <p> Anti-Epidemic Story: <a href="https://newscast.sisu.edu.cn/cwxw/e1613a3e05a74e7799c1333c4c880fa7.htm" target="_blank">Anti-Epidemic Story: Perseverance in Ordinary Times</a></p>
+           <p>Award: 2025 "The 2nd Chengdu-Chongqing Economic Circle International Chinese Language Competition" Outstanding Instructor</p>
+           <p>Award: The 27th China Robot and Artificial Intelligence Competition (Chongqing Division) & The 5th Chongqing Robot and Artificial Intelligence University Guidance Award (Students: Wu Ling, Liu Kaipeng, Bi Tingting)</p>
+           <p>Award: Outstanding Undergraduate Thesis Supervision Award, Innovation and Entrepreneurship Guidance Award</p>
+           <p>Award: Developed tool "AI Assistant for International Chinese Language Education Learning" won the "Gold Medal Teaching Tool" at the 2025 World Chinese Language Conference <a href="https://www.chineseplus.net/ability/62" target="_blank">, Featured on ChinesePlus</a></p>
+           <p>Award: 2025 Teacher Teaching Innovation Competition, New Liberal Arts Track, Senior Professional Title First Prize</p>
+           <p>Award: 2026 The 6th Chongqing University Teacher Teaching Innovation Competition Provincial First Prize</p>
+           <p>Award: 2025 Chongqing First College Student New Liberal Arts Practice Innovation Competition, Project Title: AI Bidirectional Empowerment for Families: Precision Prevention Support System for Alzheimer's Disease, Second Prize (Zhuo Yao, Kuang Jiali, et al.)</p>
+           <p>Award: 2026 Chongqing Municipal Education Commission "The 5th Chongqing College Student Rural Revitalization Creative Competition," Project Title: Chrysanthemum Language New Compilation, Second Prize (Zhang Qing Shui Lan, Zhou Yi Ning, Zeng Wei Jing, Xiao Qi Yu, Chen Yu Xi)</p>
+           <p>Graduate Student 2026 University-level Research Project Approval: A Study on the Move Structure of Chinese Abstracts in Empirical Papers from International Chinese Language Education Academic Journals (Zhang Yixin)</p>
+           <p>Series Lecturer on "AI Common Tool Usage Tips" for the 21st Session of the Hongyan Youth League School "Young Marxist Training Project" at Sichuan International Studies University <a href="https://mp.weixin.qq.com/s/YX_1ZjUJmmUaD7wOEHHEcA" target="_blank">, AI Common Tool Usage Tips</a></p>
+           <p>Award: Outstanding Undergraduate Thesis Supervision Award, Innovation and Entrepreneurship Guidance Award</p>
+           <p>Award: 2026 Outstanding Communist Party Member</p>
+            <p>Training: Department of Language and Character Information Management, Ministry of Education, Announcement of the 12th Session of the National Language Commission Outstanding Young and Middle-Aged Scholars Research Training, Xiamen University Siming Campus (July 19-25, 2026): <a href="https://ywky.edu.cn/article.html?id=349" target="_blank">Department of Language and Character Information Management, Ministry of Education, Announcement of the 12th Session of the National Language Commission Outstanding Young and Middle-Aged Scholars Research Training</a></p>
+        </ul>
+
+     <h2>Useful Tools</h2>
+     <ul>
+          <li>easyScholar https://www.easyscholar.cc/</li>
+          <li>National Standard Information Public Service Platform https://std.samr.gov.cn/</li>
+          <li>Download English Books https://zh.vbh101.ru</li>              
+          <li>Video Download Tool https://snapany.com/zh/bilibili</li> 
+          <li>MarkDown to Word Converter https://wxaiway.com/md2wd/</li> 
+          <li>Free Video Watching https://v.vps6.cn/#kj</li> 
+          <li>Research AI Drawing https://www.drawio.com/</li>       
+          <li>Juchiyun https://www.matpool.com/</li>  
+          <li>China Language and Writing Network http://www.china-language.edu.cn/#/index</li>  
+          <li>National Language Resources Service Platform https://fw.ywky.edu.cn/#/home</li>  
+          <li>Department of Language and Character Information Management, Ministry of Education (Language Standards) http://www.moe.gov.cn/s78/A19/</li>
+          <li>How to download videos from WeChat Channels: The mini-program is called "Yuwan Watermark Remover." Copy and paste the video link into the mini-program to download.</li>
+          <li>AI Flowchart https://www.easechart.com/</li>  
+          <li>AI Quantitative Trading Learning https://ai-quant-demo.netlify.app/</li>  
+          <li>Wang An AI Quantitative Trading Learning https://waanng.github.io/ai-quant/</li>  
+          <li>Web Publishing https://www.netlify.com</li>
+          <li>Web Publishing https://devfile.cn </li>
+          <li>AI Assistant for International Chinese Language Education Learning 1.0 https://chineselearningai.netlify.app</li>
         </ul>
         
     </div>
 
     <div class="section contact">
         <h2>Contact</h2>
-         <p>Mailing address: No. 33, Zhuangzhi Road, Lieshimu, Shapingba District, Chongqing</p>
-         <p>WeChat Official Account:  WeChat to search "large language model knowledge"</p>
-        <p>github: https://github.com/zhouqihong</p>
-         <p>Bilibili：<a href="https://space.bilibili.com/480870830?spm_id_from=333.337.0.0" target="_blank">https://space.bilibili.com/480870830?spm_id_from=333.337.0.0</a></p>
+         <p>Address: No. 33, Zhuangzhi Road, Lieshimu, Shapingba District, Chongqing, China</p>
+         <p>WeChat Official Account: Search "大语言模型知学" on WeChat</p>
+        <p>GitHub: https://github.com/zhouqihong</p>
+         <p>Bilibili: <a href="https://space.bilibili.com/480870830?spm_id_from=333.337.0.0" target="_blank">https://space.bilibili.com/480870830?spm_id_from=333.337.0.0</a></p>
     </div>
 </body>
 </html>
