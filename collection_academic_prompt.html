@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>科研提示词归类整理</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #f5f7fb;
+      font-family: 'Segoe UI', 'PingFang SC', Roboto, 'Helvetica Neue', sans-serif;
+      padding: 24px;
+      color: #1e2a3a;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #0b1c33;
+      letter-spacing: 1px;
+      border-left: 6px solid #2a6f97;
+      padding-left: 18px;
+      background: linear-gradient(to right, #f0f4fa, transparent);
+    }
+    .subhead {
+      font-size: 14px;
+      color: #5e6f8d;
+      margin-bottom: 28px;
+      padding-left: 24px;
+      border-bottom: 1px solid #dce3ed;
+      padding-bottom: 12px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,20,40,0.06);
+      padding: 16px 18px 18px 18px;
+      transition: all 0.15s ease;
+      border: 1px solid #e9edf4;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      box-shadow: 0 8px 20px rgba(26, 67, 113, 0.10);
+      border-color: #c8d6e8;
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #eef2f8;
+      padding-bottom: 8px;
+    }
+    .card-header .icon {
+      font-size: 20px;
+      line-height: 1;
+    }
+    .card-header .cat {
+      font-weight: 600;
+      font-size: 16px;
+      color: #1f3a5f;
+      letter-spacing: 0.3px;
+    }
+    .card-header .badge {
+      margin-left: auto;
+      background: #e0e8f3;
+      color: #1e3b5c;
+      font-size: 11px;
+      font-weight: 500;
+      padding: 2px 10px;
+      border-radius: 20px;
+    }
+    .prompt-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex: 1;
+    }
+    .prompt-list li {
+      font-size: 13.5px;
+      line-height: 1.6;
+      padding: 8px 0 6px 0;
+      border-bottom: 1px dashed #edf2f9;
+      color: #1f2c40;
+      word-break: break-word;
+    }
+    .prompt-list li:last-child {
+      border-bottom: none;
+    }
+    .prompt-list li::before {
+      content: "▸";
+      color: #3b7a9e;
+      font-weight: 400;
+      margin-right: 6px;
+      opacity: 0.7;
+    }
+    .prompt-list li .highlight {
+      background: #f0f6ff;
+      border-radius: 4px;
+      padding: 0 4px;
+      color: #004080;
+      font-weight: 500;
+    }
+    .footer-note {
+      margin-top: 32px;
+      font-size: 13px;
+      color: #6a7d9c;
+      border-top: 1px solid #dce3ed;
+      padding-top: 18px;
+      text-align: center;
+      letter-spacing: 0.3px;
+    }
+    @media (max-width: 480px) {
+      .grid { grid-template-columns: 1fr; }
+      body { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>📋 科研提示词 · 归类整理</h1>
+  <div class="subhead">基于用户提供的多个任务指令，按主题分类，保留原文核心表述</div>
+
+  <div class="grid">
+    <!-- 卡片：数据处理与问卷统计分析 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon">📊</span>
+        <span class="cat">数据处理 &amp; 问卷统计</span>
+        <span class="badge">8项</span>
+      </div>
+      <ul class="prompt-list">
+        <li>AI使用调查.xlsx，请根据数据，请生成数据，符合原来数据,符合正态分布，请生成433个人的数据，请填写到:AI使用调查更新.xlsx</li>
+        <li>请调整数据，信度在0.95，效度在0.9735，数据真实，请调整数据信度到0.85-0.92左右，效度在0.88-0.92左右。</li>
+        <li>请修正数据，……要求确保18题到58题中维度……信度在0.6以上，总体0.9左右，整个数据符合真实调查数据。</li>
+        <li>请对问卷进行统计分析，1.量化分析，2.对问答部分进行焦点写作分析，请返回分析结果，命名为结果.docx。</li>
+        <li>请整理出一份完整的问卷，返回为：调查问卷.docx，2.请整理出供研究者使用的问卷，返回为:研究者使用问卷.docx</li>
+        <li>请使用berttopic模型对表格数据中的……对下面4个焦点写作题进行分析……返回主题.docx</li>
+        <li>请根据现有研究设计和数据，请设计几种复杂且高级流行的统计方法，请直接返回方案</li>
+        <li>整合统计结果到论文中……请将结果信息结果.docx 补充到论文中……</li>
+      </ul>
+    </div>
+
+    <!-- 卡片：论文撰写与文献综述 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon">✍️</span>
+        <span class="cat">论文撰写 &amp; 文献综述</span>
+        <span class="badge">7项</span>
+      </div>
+      <ul class="prompt-list">
+        <li>请返回引言部分和文献综述的写作，返回为华文教师AI使用现状.docx</li>
+        <li>完整论文.docx 请修改论文，1.问卷设计缺乏依据，请补充前人文献和依据；2.结果与讨论部分请与前人对话，引用文献；3.请调整文章的格式……</li>
+        <li>华文教师人工智能素养的现状、困境与提升路径，请补充文献，1.补充宋继华、王治敏、饶高琦、徐娟等相关的最新文献……</li>
+        <li>请微调……将相同问题或者相同的内容，请将引用调整为括号内引用多篇作者+时间……2.可以适当增加英文文献；3.修改之处请加粗返回</li>
+        <li>请按照CSSCI期刊语言文字应用的要求修改论文……AI赋能学术汉语口语语料库构建探索.docx</li>
+        <li>请修改论文格式，修改：完整论文更新2.docx，返回：完整论文更新2_格式调整.docx，按照要求修改……</li>
+        <li>请调整文章的格式，请参考CSSCl来源《华文教学与研究》期刊格式……</li>
+      </ul>
+    </div>
+
+    <!-- 卡片：格式调整与排版 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon">🔧</span>
+        <span class="cat">格式调整 &amp; 排版</span>
+        <span class="badge">5项</span>
+      </div>
+      <ul class="prompt-list">
+        <li>请微调格式，部分“”采用了times new roman， 请将所有引号调整为宋体格式，其他不变……</li>
+        <li>请将文中的英文引号改为中文宋体格式；2.请将数字和字母改为 times new roman格式……</li>
+        <li>请修改论文格式，修改：完整论文更新2.docx，返回：完整论文更新2_格式调整.docx，按照要求修改……</li>
+        <li>请调整文章的格式，请参考CSSCl来源《华文教学与研究》期刊格式……</li>
+        <li>请调整格式，部分“”采用了times new roman， 请将所有引号调整为宋体格式……（重复，保留原文）</li>
+      </ul>
+    </div>
+
+    <!-- 卡片：文献管理与引用规范 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon">📚</span>
+        <span class="cat">文献管理 &amp; 引用规范</span>
+        <span class="badge">6项</span>
+      </div>
+      <ul class="prompt-list">
+        <li>将相同问题或者相同的内容，请将引用调整为括号内引用多篇作者+时间，例如（张三，1998；李四，2000；王五，2026），放在引用内容句子的后面，注意不能混淆文献的观点</li>
+        <li>可以适当增加英文文献；修改之处请加粗返回</li>
+        <li>补充文献，1.补充宋继华、王治敏、饶高琦、徐娟等相关的最新文献，并给出真实文献及链接；2.补充相关的政策文件并给出链接；3.修改之处请加粗返回</li>
+        <li>请增加真实文献引用，请调整为：括号式引用（强调观点）：将作者和年份放在句号之前的括号内，可以多为作者放在括号里用分号分开。</li>
+        <li>叙述式引用（强调作者）：将作者作为句子主语，年份紧跟其后，页码（如有）放句末。例：郑艳群（2023a）指出……</li>
+        <li>括号式引用（强调观点）：将作者和年份放在句号之前的括号内。例：智能时代需在核心领域构建基本框架（郑艳群，2023a）。</li>
+      </ul>
+    </div>
+
+    <!-- 卡片：资源整理与HTML生成（来自学习材料网址） -->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon">🌐</span>
+        <span class="cat">资源整理 &amp; HTML生成</span>
+        <span class="badge">8项</span>
+      </div>
+      <ul class="prompt-list">
+        <li>请读取信息，image.png ，请在网上获取信息，请汇总为一个html，如果有个人官网介绍，请链接到个人官网，请返回文件名为 学友圈.html</li>
+        <li>请读取文件，将内容做成html文件，命名为构建大语言观.html，并链接到index.html中，7月20号下午的位置。</li>
+        <li>请读取文件夹下的文件……提取主要内容然后给每个pdf做一个html文件，文件名以pdf文件名相同，返回hmtl, 请不要使用截图。</li>
+        <li>请把内容添加到index.htl中的资源中心：http://www.moe.gov.cn/jyb_sjzl/ziliao/A19/202604/W020260407554480905449.pdf</li>
+        <li>在index.html中资源中心，添加资源 语言交流合作中心：https://www.chinese.cn/page/#/pcpage/mainpage</li>
+        <li>请将交互顺序，先排国家语委，然后排语言交流合作中心，其他的按顺序调整。</li>
+        <li>请把内容添加到index.htl中的资源中心……（具体政策文件链接）</li>
+        <li>数字化和人工智能赋能研究.pdf，请提取内容转换成html，请将链接放到7月24号上午的内容中</li>
+      </ul>
+    </div>
+
+    <!-- 卡片：项目申报与心得写作 -->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon">📝</span>
+        <span class="cat">项目申报 &amp; 心得写作</span>
+        <span class="badge">3项</span>
+      </div>
+      <ul class="prompt-list">
+        <li>请读取文件内容，请按照文件：03 研究计划书-空表-第12期(1).doc文件格式和要求填写，要求符合学习资料的主要精神，返回为同目录 申报书2.docx</li>
+        <li>请修改，返回到总结更新.docx，缺乏文采，可以赋诗词，可以结合厦大的一些名言，报国，题目也不够有诗意。下一步计划……学习心得</li>
+        <li>请微调与润色，请补充几篇参考文献，正文使用核实的引用，1篇文献最多引用1句话……（涉及论文整体润色）</li>
+      </ul>
+    </div>
+
+    <!-- 卡片：其他（综合/模型应用） -->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon">⚙️</span>
+        <span class="cat">其他 · 模型应用 &amp; 综合</span>
+        <span class="badge">4项</span>
+      </div>
+      <ul class="prompt-list">
+        <li>请使用berttopic模型对表格数据中的AI使用调查更新数据3.xlsx……对4个焦点写作题进行分析，返回结果的学术性描述，返回结果为 主题.docx。</li>
+        <li>请设计几种复杂且高级流行的统计方法，请直接返回方案</li>
+        <li>请微调与润色，请补充几篇参考文献，正文使用核实的引用，1篇文献最多引用1句话……（综合润色）</li>
+        <li>请修改论文格式，修改：完整论文更新2.docx，返回：完整论文更新2_格式调整.docx，按照要求修改，格式如下：D:\2026\北外夏令营\夏令营相关资料\华文教师素养\华文教学与研究，参考文献格式样例2026.doc, 论文格式模板2026.doc, 中英文长摘要模板2026.docx</li>
+      </ul>
+    </div>
+
+    <!-- 卡片：Python编程教材编写（来自prompt.txt） -->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon">📘</span>
+        <span class="cat">Python 编程教材编写</span>
+        <span class="badge">12项</span>
+      </div>
+      <ul class="prompt-list">
+        <li>编写教材的一章内容，需要有说明和举例，用python写代码，具体内容为注释、行、缩进、语句换行。</li>
+        <li>编写教材的一章内容，用python写代码，有说明有举例，具体内容为字符串的操作与使用。</li>
+        <li>编写教材的一章内容，用python写代码，有叙述有举例说明，具体内容为while循环、for循环、while嵌套、If语句、If else语句、If elif语句、if嵌套语句</li>
+        <li>编写教材的一章内容，用python写代码，有叙述有举例说明，具体内容为if语句、if……else语句、If elif语句、if嵌套语句。</li>
+        <li>编写教材的一章内容，用python写代码，要求有叙述有举例，具体内容为while循环、for循环、while嵌套。</li>
+        <li>编写教材的一章内容，用python写代码，具体内容为列表的操作与使用。</li>
+        <li>编写教材的一章内容，用python写代码，学生对象为大一文科生，要求有叙述有举例有解释，要求所举的例子符合文科生学习，具体内容为函数的定义、调用、参数和返回值。</li>
+        <li>编写教材的一章内容，用python写代码，学生对象为大一文科生，要求有叙述有举例有解释，要求所举的例子符合文科生学习，具体内容为nltk抽取搭配 + 用互信息过滤搭配</li>
+        <li>编写教材的一章内容，用python写代码，学生对象为大一文科生，要求有叙述有举例有解释，要求所举的例子符合文科生学习，具体内容为nltk与依存句法抽取搭配，用互信息过滤低频搭配。</li>
+        <li>编写教材的一章内容，用python写代码，要求有叙述有举例有解释，具体内容为人工智能技术在语言研究中的应用。</li>
+        <li>编写教材的一章内容，要求有叙述有举例有解释，请根据下面的代码进行编写，要求对每一行代码有中文注释。</li>
+        <li>请用做笔记的方式，言简意赅，抓住核心关键词，解释分类算法、聚类算法、回归算法、姜维算法，并举例。</li>
+      </ul>
+    </div>
+
+    <!-- 新增卡片：新文科教学改革与论文写作（来自提示词.txt） -->
+    <div class="card">
+      <div class="card-header">
+        <span class="icon">🎓</span>
+        <span class="cat">新文科教学改革 &amp; 论文写作</span>
+        <span class="badge">4项</span>
+      </div>
+      <ul class="prompt-list">
+        <li>请阅读：关于征集《新文科教学改革研究（第3辑）.docx，根据要求完成学术论文，要求完整的论文格式，包括 题目、摘要、关键词、正文、参考文献、注释等，请返回：论文.docx。数据来源，1.问卷：Python基础与数据挖掘_AI赋能学习体验调查问卷_研究者使用版.docx，2.数据为：问卷调查汇总表.xlsx</li>
+        <li>论文.docx ,1.问卷设计部分请给出前人研究文献的依据，2.（一）讨论部分请替换标题为实质性内容，3.请增加效度检验结果，4.格式微调，返回为论文更新D:\2026\新文科教学改革研究（第3辑）\skill.md .docx</li>
+        <li>问卷调查汇总表.xlsx ,问卷调查中的数据请确保各个维度的信度在0.7到0.92之间，总体在0.88=0.92之间，其他数据不变，请返回：问卷调查汇总更新.docx；</li>
+        <li>2.请根据新数据更新AI赋能新文科编程通识课的学习体验及其教学优化.docx ，3.核查文献的真实性，如果不存在的文献请删除，补充真实的文献，返回：AI赋能新文科编程通识课的学习体验及其教学优化_更新.docx</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    ⚡ 共整理 <strong>57</strong> 条科研提示词 · 按主题归为9类 · 保留原文核心指令
+  </div>
+</div>
+</body>
+</html>
